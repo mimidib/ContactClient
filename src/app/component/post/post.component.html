@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Post Details</h2>
+
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input #title type="text" class="form-control" id="title" placeholder="Enter Title" value="{{post.title}}">
+
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea #body type="text" class="form-control" id="body" placeholder="Enter Body"
+        value="{{post.body}}"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-danger" (click)="deletePost()">Delete</button>
+    <button type="submit" class="btn btn-primary" (click)="updatePost(title.value, body.value)">Update</button>
+  </form>
+</div>

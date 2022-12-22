@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>All Posts</h2>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+        <td>
+          <!--when we update, this post is stored in Activated Router-->
+          <button type="submit" class="btn btn-secondary" [routerLink]="['/posts', post.id]">
+            Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
